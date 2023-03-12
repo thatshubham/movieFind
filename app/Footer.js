@@ -1,6 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 export default function Footer() {
+    <script data-goatcounter="https://vercel.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
     return (
         <>
             <footer className="relative bottom-0 w-full body-font border-t-2 border-gray-200">
