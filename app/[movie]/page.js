@@ -15,11 +15,18 @@ export default async function MovieDetail({ params }) {
     const data = await fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=${process.env.API_KEY}`);
     const response = await data.json();
     const imdb = "https://www.imdb.com/title/" + response.imdb_id;
+
     function formatDate(dateString) {
         const date = new Date(dateString);
+        if (isNaN(date.getTime())) {
+            return "Not Available";
+        }
         const options = { day: 'numeric', month: 'short', year: 'numeric' };
         return new Intl.DateTimeFormat('en-US', options).format(date);
     }
+
+
+
     response.release_date = formatDate(response.release_date);
     if (response.budget == 0) {
         response.budget = "Not Available"
