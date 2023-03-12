@@ -2,23 +2,29 @@ import Movie from './Movie';
 
 
 export default async function Home() {
-  const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
-  const response  = await data.json();
+
+  let d_popular = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
+  let r_popular = await d_popular.json();
+
   return (
     <main>
-      <h1 className="mb-4 text-xl font-bold text-center bg-gray-800 text-white p-2">
-        Read about some popular movies from recent weeks.
+      <h1 className="mb-4 text-4xl bg-gray-200 shadow-md font-bold text-center text-gray-800 p-2">
+        Explore the must-watch movies of the week, every week.
       </h1>
-      <div className='grid md:grid-cols-4 md:gap-4 grid-cols-2 gap-1 container w-full'>
-          {response.results.map((movie) => (
-            <Movie 
-              key={movie.id}
-              id={movie.id}
-              title={movie.title}
-              poster_path={movie.poster_path}
-              release_date={movie.release_date}
-            />
-          ))}
+
+
+
+
+      <div className='grid md:grid-cols-4 md:gap-x-16 md:gap-y-8 grid-cols-2 gap-x-1 gap-y-1 container w-full'>
+        {r_popular.results.map((movie) => (
+          <Movie
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            poster_path={movie.poster_path}
+            release_date={movie.release_date}
+          />
+        ))}
       </div>
     </main>
   )

@@ -17,12 +17,20 @@ export default function Footer() {
                         </Link>
                     </div>
 
-                    <span className="inline-flex">
-                        <p className="font-bold text-gray-400">Made with Next.JS and tailwindcss</p> &nbsp;
-                        <Link href="https://thatshubham.com/">
-                            <p className="font-bold text-gray-700 bg-amber-400 hover:bg-green-300"> by thatshubham</p>
+                    <span className="my-2 text-center md:text-right flex flex-col justify-end align-center md:mx-0 mx-2">
+                        <Link href="/about"
+                            className="my-2 font-bold text-gray-700 inline-block 
+                            hover:underline underline-offset-2 decoration-4 decoration-blue-700">
+                            About this project
                         </Link>
-                        
+
+                        <p className="font-bold text-gray-400">Made with Next.JS and tailwindcss
+                            <Link
+                                href="https://thatshubham.com/"
+                                className="md:ml-2 inline-block font-bold text-gray-700 bg-amber-400 hover:bg-green-300"
+                            >by thatshubham
+                            </Link>
+                        </p>
                     </span>
                 </div>
             </footer>
