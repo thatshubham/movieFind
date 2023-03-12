@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from 'next/script';
 
 export async function generateStaticParams() {
     const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
@@ -93,6 +94,12 @@ export default async function MovieDetail({ params }) {
                     </div>
                 </div>
             </div>
+            <Script
+                async
+                data-goatcounter="https://vercel.goatcounter.com/count"
+                src="//gc.zgo.at/count.js"
+                strategy='afterInteractive'
+            />
         </>
     )
 }
