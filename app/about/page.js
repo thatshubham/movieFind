@@ -19,7 +19,7 @@ export default function About() {
             <h2 className="text-xl my-4">Technology used</h2>
             <h3 className="font-bold text-lg mb-2">Next.js 13</h3>
             <p className="text-lg text-gray-900 antialiased">
-                The new app directory makes it easy to lay out complex interfaces that maintain state across navigations, avoid expensive re-renders, and enable advanced routing patterns. In this project, I've made use of both - Server and Client Components. The home page which consumes an API is a server component while the Movie page is a client component.
+                {`The new app directory makes it easy to lay out complex interfaces that maintain state across navigations, avoid expensive re-renders, and enable advanced routing patterns. In this project, I've made use of both - Server and Client Components. The home page which consumes an API is a server component while the Movie page is a client component.`}
             </p>
 
             <h3 className="text-lg my-2 font-bold">API Integration</h3>
@@ -29,12 +29,12 @@ export default function About() {
 
             <h3 className="text-lg my-2 font-bold">GitHub Integration</h3>
             <p className="text-lg text-gray-900 antialiased">
-                As a developer, I understand the importance of collaboration and version control. I am hosting this project on Vercel. I've used other hosting platforms and VPS in the past, deploying to Vercel is really effortless. The platform automatically detects Next.js, runs next build, and optimizes the build output for me. The code lives on a github repo and all changes are synced automatically.
+                {`As a developer, I understand the importance of collaboration and version control. I am hosting this project on Vercel. I've used other hosting platforms and VPS in the past, deploying to Vercel is really effortless. The platform automatically detects Next.js, runs next build, and optimizes the build output for me. The code lives on a github repo and all changes are synced automatically.`}
             </p>
 
             <h3 className="text-lg my-2 font-bold">TailwindCSS</h3>
             <p className="text-lg text-gray-900 antialiased">
-                Being a utility-first CSS framework, it helps me design and develop responsive and mobile-friendly web applications quickly. I can leverage the power of TailwindCSS to create custom styles and layouts quickly and it's integration with Next.Js 13 is as easy as it gets.
+                {` Being a utility-first CSS framework, it helps me design and develop responsive and mobile-friendly web applications quickly. I can leverage the power of TailwindCSS to create custom styles and layouts quickly and it's integration with Next.Js 13 is as easy as it gets. `}
             </p>
 
             <h2 className="text-lg my-2 font-bold">My personal webpage</h2>
