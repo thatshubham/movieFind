@@ -20,6 +20,7 @@ export default function Navbar() {
                             height="150"
                             className="rounded-lg max-h-6 md:max-h-10 w-auto hover:shadow-amber-400 hover:shadow-lg duration-150"
                             src="/c.png"
+                            alt="buymeacoffee"
                         />
                     </Link>
                 </div>
